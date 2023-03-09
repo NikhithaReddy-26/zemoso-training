@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Score Tracker</title>
+    <style>
+      #score-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-size: 3rem;
+      }
+      button {
+        font-size: 2rem;
+        padding: 10px 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="score-container">
+      <div>
+        <p>Local Score: <span id="local-score">0</span></p>
+        <p>Session Score: <span id="session-score">0</span></p>
+        <button id="increment-btn">Increment Scores</button>
+      </div>
+    </div>
+
+    <script>
+      const localScore = localStorage.getItem("localScore") || 0;
+      const sessionScore = sessionStorage.getItem("sessionScore") || 0;
+
+      const localScoreElem = document.getElementById("local-score");
+      const sessionScoreElem = document.getElementById("session-score");
+
+      localScoreElem.textContent = localScore;
+      sessionScoreElem.textContent = sessionScore;
+
+      const incrementBtn = document.getElementById("increment-btn");
+      incrementBtn.addEventListener("click", () => {
+        const newLocalScore = Number(localScoreElem.textContent) + 1;
+        const newSessionScore = Number(sessionScoreElem.textContent) + 1;
+
+        localScoreElem.textContent = newLocalScore;
+        sessionScoreElem.textContent = newSessionScore;
+
+        localStorage.setItem("localScore", newLocalScore);
+        sessionStorage.setItem("sessionScore", newSessionScore);
+      });
+    </script>
+  </body>
+</html>
