@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>ZemosoRestaurant</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 80%;
+        overflow: auto;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+
+      /* Modal Content */
+      .modal-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        height: 80%;
+        align-items: normal;
+        overflow: auto;
+      }
+
+      .close {
+        color: #ffffff;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: #fffefe;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      .heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .heading .close {
+        margin-left: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <h1>Restaurant Application</h1>
+    </nav>
+    <div class="container">
+      <div class="container1">
+        <div class="tables">
+          <h1>
+            <center>Tables</center>
+          </h1>
+
+          <input type="text" placeholder="Search table" id="search-input" />
+
+          <div id="myModalOne" class="modal">
+            <div class="modal-content" id="myModal1">
+              <h3 class="heading">
+                Table - 1 | Order Details
+                <span class="close" onclick="close(event)">&times;</span>
+              </h3>
+
+              <table id="order-table">
+                <tr>
+                  <th>S.No</th>
+                  <th>Item Name</th>
+                  <th>No. of Items</th>
+                  <th>Price</th>
+                  <th>delete</th>
+                </tr>
+              </table>
+
+              <div class="table-details">
+                <div class="tble-dtls">
+                  <span>Total Items:<span id="total-items1">0</span></span>
+                  <span>Total Cost:<span id="total-cost1">0</span></span>
+                </div>
+              </div>
+              <div class="generatebill">
+                <h3 onclick="generateBill1()">CLOSE SESSION (GENERATE BILL)</h3>
+              </div>
+            </div>
+          </div>
+
+          <div id="myModalTwo" class="modal">
+            <div class="modal-content" id="myModal2">
+              <h3 class="heading">
+                Table - 2 | Order Details
+                <span class="close" onclick="close(event)">&times;</span>
+              </h3>
+
+              <table id="order-table1">
+                <tr>
+                  <th>S.No</th>
+                  <th>Item Name</th>
+                  <th>No. of Items</th>
+                  <th>Price</th>
+                  <th>delete</th>
+                </tr>
+              </table>
+
+              <div class="table-details">
+                <div class="tble-dtls">
+                  <span>Total Items: <span id="total-items2">0</span></span>
+                  <span>Total Cost: <span id="total-cost2">0</span></span>
+                </div>
+              </div>
+              <div class="generatebill">
+                <h3 onclick="generateBill()">CLOSE SESSION (GENERATE BILL)</h3>
+              </div>
+            </div>
+          </div>
+          <div id="myModalThree" class="modal">
+            <div class="modal-content" id="myModal3">
+              <h3 class="heading">
+                Table - 3 | Order Details
+                <span class="close" onclick="close(event)">&times;</span>
+              </h3>
+
+              <table id="order-table2">
+                <tr>
+                  <th>S.No</th>
+                  <th>Item Name</th>
+                  <th>No. of Items</th>
+                  <th>Price</th>
+                  <th>delete</th>
+                </tr>
+              </table>
+
+              <div class="table-details">
+                <div class="tble-dtls">
+                  <span>Total Items:<span id="total-items3">0</span></span>
+                  <span>Total Cost:<span id="total-cost3">0</span></span>
+                </div>
+              </div>
+              <div class="generatebill">
+                <h3 onclick="generateBill2()">CLOSE SESSION (GENERATE BILL)</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="tablecard">
+            <div
+              class="table"
+              ondragover="allowDrop(event)"
+              ondrop="drop1(event)"
+              id="table1"
+            >
+              <h2 class="h2h2">
+                <b><center>Table - 1</center></b>
+              </h2>
+              <span id="total-items-1">Total Items: 0</span>
+              <span id="total-cost-1">Total Cost: 0.00</span>
+            </div>
+          </div>
+
+          <div class="tablecard">
+            <div
+              class="table"
+              ondragover="allowDrop(event)"
+              ondrop="drop2(event)"
+              id="table2"
+            >
+              <h2 class="h2h2">
+                <b><center>Table - 2</center></b>
+              </h2>
+              <span id="total-items-2">Total Items: 0</span>
+              <span id="total-cost-2">Total Cost: 0.00</span>
+            </div>
+          </div>
+
+          <div class="tablecard">
+            <div
+              class="table"
+              ondragover="allowDrop(event)"
+              ondrop="drop3(event)"
+              id="table3"
+            >
+              <h2 class="h2h2">
+                <b><center>Table - 3</center></b>
+              </h2>
+              <span id="total-items-3">Total Items: 0 </span>
+              <span id="total-cost-3">Total Cost: 0.00 </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container2">
+        <div class="Menu" id="test">
+          <h1>
+            <center>Menu</center>
+          </h1>
+
+          <input
+            type="text"
+            placeholder="Search delicious items"
+            id="search"
+            onkeyup="searchMenu()"
+          />
+
+          <div class="menucard" id="drag-div" draggable="true"></div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var modal1 = document.getElementById("myModalOne");
+      var modal2 = document.getElementById("myModalTwo");
+      var modal3 = document.getElementById("myModalThree");
+
+      var btn = document.getElementsByClassName("table");
+      console.log(btn[2]);
+
+      var span1 = document.getElementsByClassName("close")[0];
+      var span2 = document.getElementsByClassName("close")[1];
+      var span3 = document.getElementsByClassName("close")[2];
+
+      btn[0].onclick = function () {
+        modal1.style.display = "block";
+      };
+      btn[1].onclick = function () {
+        modal2.style.display = "block";
+      };
+      btn[2].onclick = function () {
+        modal3.style.display = "block";
+      };
+
+      span1.onclick = function (event) {
+        modal1.style.display = "none";
+      };
+      span2.onclick = function (event) {
+        modal2.style.display = "none";
+      };
+      span3.onclick = function (event) {
+        modal3.style.display = "none";
+      };
+
+      window.onclick = function (event) {
+        if (event.target == modal1) {
+          modal1.style.display = "none";
+        } else if (event.target == modal2) {
+          modal2.style.display = "none";
+        } else if (event.target == modal3) {
+          modal3.style.display = "none";
+        }
+      };
+    </script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+  <script src="script.js"></script>
+</html>
