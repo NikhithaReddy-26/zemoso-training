@@ -11,7 +11,7 @@ searchInput.addEventListener("input", () => {
       filterableDivs[i].style.display = "";
     } else {
       filterableDivs[i].style.display = "none";
-    }it 
+    }
   }
 });
 
