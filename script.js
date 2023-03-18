@@ -16,7 +16,7 @@ searchInput.addEventListener("input", () => {
 });
 
 async function getData() {
-  var response = await fetch("/contents.json");
+  var response = await fetch("contents.json");
   var data = await response.json();
   console.log(data);
 
