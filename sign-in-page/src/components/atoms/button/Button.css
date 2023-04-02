@@ -1,0 +1,47 @@
+
+
+.button {
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.buttonStyle {
+  display: flex;
+  justify-content: center;
+}
+  
+.sign-in {
+    text-align: center;
+    background-color: blue;
+    color: white;
+    width : 85%;
+    font-size: 16px;
+    height: 2.5rem;
+    margin: 15px 0;
+}
+p {
+  padding: 0 8px;
+  margin: 0;
+}
+
+.signinwithgoogle {
+    background-color: white;
+    color: black;
+    width : 85%;
+    font-size: 15px;
+    height: 2.4rem;
+    border: 1px solid slategray;
+    margin: 20px 0;
+}
+
+.signinwithgithub {
+  background-color: white;
+  color: black;
+  width : 85%;
+  font-size: 14px;
+  height: 2.5rem;
+  border: 1px solid slategray;
+  margin: 20px 0;
+}

@@ -1,0 +1,24 @@
+input {
+    display: block;
+    width: 83%;
+    height: 2.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid;
+    border-color: inherit;
+    background-color: white;
+}
+label {
+    margin: 15px 6%;
+    text-align: left;
+}
+.email {
+    font-size: 0.875rem;
+    height: 2rem;
+    margin: 15px 0;
+}
+
+.password {
+    font-size: 0.875rem;
+    height: 2rem;
+    margin: 15px 0;
+}

@@ -1,0 +1,67 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  background-color: rgb(243, 243, 243);
+}
+
+.App {
+  text-align: center;
+}
+.container {
+  width : 30%;
+  height: 650px;
+  border: 1px solid whitesmoke;
+  background-color: white;
+  margin: 5% 35%;
+  text-align: left;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: inset;
+}
+
+.div2 {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 6.5%;
+  width: 100%;
+  /* align-items: center; */
+  
+}
+
+.div3 {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 6.5%;
+  width: 100%;
+}
+
+.div4 {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 22%;
+}
+
+Input {
+  display: block;
+  padding: 5px;
+}
+
+.checkbox1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2px;
+  margin: 10px 8%;
+}
+
+.divider {
+  margin: 20px 6.5%;
+  width: 85%;
+  text-align: center;
+  /* color: black; */
+}
+
+.MuiDivider-wrapper {
+  color: black;
+}
+
