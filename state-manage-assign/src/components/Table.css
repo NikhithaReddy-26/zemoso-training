@@ -1,0 +1,61 @@
+
+.App {
+    margin:  0;
+    background-color: #F7F8FA;
+}
+.parentCont {
+    border-radius: 10px;
+}
+.table-headings {
+background-color: #F7F8FA;
+}
+.header-top {
+background-color:  #F7F8FA;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+border-radius: 10px;
+
+}
+.header {
+background-color: white;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+padding: 2% 1.2%;
+
+}
+.button {
+    display: inline;
+   
+    margin: 5px 10px;
+    font-size: large;
+    padding: 10px;
+
+}
+
+#manual {
+color: white;
+background-color: blue;
+}
+
+.css-ahj2mt-MuiTypography-root {
+padding: 2% 1%;
+font-size: large;
+font-weight: 700;
+}
+
+.css-1rwt2y5-MuiButtonBase-root-MuiButton-root  {
+margin: 18px;
+}
+.css-1e6y48t-MuiButtonBase-root-MuiButton-root {
+    border: 1px solid black;
+}
+
+.MuiButtonBase-root {
+    padding: 0;
+}
+
+.css-1ps6pg7-MuiPaper-root{
+    border-radius: 10px;
+}
