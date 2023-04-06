@@ -9,7 +9,7 @@ export interface InputProps {
 
 function Search() {
     let inp = window.document.getElementById('myInput');
-    console.log(inp?.nodeValue);
+  
 
 } 
 
