@@ -1,0 +1,9 @@
+StringBuilder Class
+class name is in CamelCase, with the first letter of each word capitalized, and all other letters in lowercase.
+method names in the StringBuilder class also follow the CamelCase convention, with the first letter of each word capitalized, and all other letters in lowercase.
+The variable names in the StringBuilder class are in lowercase, and each word is separated by an underscore
+
+LocalDateTime Class
+class name is in CamelCase, with the first letter of each word capitalized, and all other letters in lowercase.
+method names in the LocalDateTime class also follow the CamelCase convention, with the first letter of each word capitalized, and all other letters in lowercase.
+variable names in the LocalDateTime class are also in lowercase, and each word is separated by an underscore
